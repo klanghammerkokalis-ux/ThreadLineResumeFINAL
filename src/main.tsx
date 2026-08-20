@@ -136,21 +136,9 @@ function App() {
     }
   }
 
-  async function checkout() {
+  function checkout() {
     setCheckoutLoading(true);
-    setError("");
-    try {
-      const response = await fetch("/api/create-checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-      });
-      const payload = await response.json() as { url?: string; error?: string };
-      if (!response.ok || !payload.url) throw new Error(payload.error || "Checkout is unavailable.");
-      window.location.assign(payload.url);
-    } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Checkout is unavailable.");
-      setCheckoutLoading(false);
-    }
+    window.location.assign("https://buy.stripe.com/28E14fdwh7g19PF8FZ08g0a");
   }
 
   return (
@@ -262,9 +250,9 @@ function App() {
               <a href="#analyze" className="button button-outline">Analyze for free</a>
             </article>
             <article className="price-card premium">
-              <span className="popular">Most useful</span><span className="plan">Deep Dive</span><h3>$19 <small>one time</small></h3><p>Turn the honest read into a sharper application.</p>
-              <ul><li>Everything in Snapshot</li><li>Full ATS keyword audit</li><li>Evidence-backed resume rewrites</li><li>Recruiter objections</li><li>Interview probability analysis</li><li>Career pivots and hidden skills</li><li>30-minute improvement plan</li><li>Line-by-line Truth Check</li></ul>
-              <button className="button" onClick={checkout} disabled={checkoutLoading}>{checkoutLoading ? "Opening checkout…" : "Unlock the full report"} <span>→</span></button>
+              <span className="popular">Human-reviewed</span><span className="plan">Same-Day Resume Diagnostic</span><h3>$49 <small>one time</small></h3><p>Get a focused expert review of your resume for the job you want.</p>
+              <ul><li>Human review of your current resume</li><li>Review against your target job posting</li><li>Your 5 highest-impact fixes</li><li>Clear positioning recommendations</li><li>Delivered within one business day</li><li>No subscription or recurring charge</li></ul>
+              <button className="button" onClick={checkout} disabled={checkoutLoading}>{checkoutLoading ? "Opening secure checkout…" : "Get my diagnostic"} <span>→</span></button>
             </article>
           </div>
         </section>
