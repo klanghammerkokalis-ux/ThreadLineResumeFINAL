@@ -153,21 +153,21 @@ function App() {
             <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
             <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
           </nav>
-          <a className="button button-small" href="#analyze">Check my fit</a>
+          <a className="button button-small" href="#pricing">Reserve a review</a>
         </div>
       </header>
 
       <main>
         <section className="hero">
           <div className="hero-copy">
-            <span className="eyebrow"><span className="dot" /> The honest resume reality check</span>
+            <span className="eyebrow"><span className="dot" /> Same-day human resume review</span>
             <h1>See what recruiters see.<br /><em>Before they do.</em></h1>
-            <p>Threadline compares your resume with the role you want, reveals the signal you’re sending, and shows what to improve—without inventing a single qualification.</p>
+            <p>Get a clear, human-reviewed diagnosis of the resume you are using now—matched against the job you want, with concrete fixes you can use immediately.</p>
             <div className="hero-actions">
-              <a href="#analyze" className="button">Analyze my resume <span>→</span></a>
+              <a href="#pricing" className="button">Reserve my same-day review <span>→</span></a>
               <a href="#sample" className="text-link">View sample report</a>
             </div>
-            <div className="trust-line"><span>✓ No account needed</span><span>✓ Evidence-based</span><span>✓ Your text isn’t stored</span></div>
+            <div className="trust-line"><span>✓ Human-reviewed</span><span>✓ Evidence-based</span><span>✓ Delivered within one business day</span></div>
           </div>
           <div className="hero-visual" aria-label="Threadline match preview">
             <div className="preview-window">
@@ -242,7 +242,7 @@ function App() {
         </section>
 
         <section className="pricing section" id="pricing">
-          <div className="section-heading"><span className="eyebrow">Simple pricing</span><h2>Clarity before commitment.</h2></div>
+          <div className="section-heading"><span className="eyebrow">Five review slots this week</span><h2>Get the feedback your application needs before you hit submit.</h2></div>
           <div className="pricing-grid">
             <article className="price-card">
               <span className="plan">Snapshot</span><h3>Free</h3><p>Know where you stand before you apply.</p>
@@ -250,9 +250,9 @@ function App() {
               <a href="#analyze" className="button button-outline">Analyze for free</a>
             </article>
             <article className="price-card premium">
-              <span className="popular">Human-reviewed</span><span className="plan">Same-Day Resume Diagnostic</span><h3>$49 <small>one time</small></h3><p>Get a focused expert review of your resume for the job you want.</p>
+              <span className="popular">Human-reviewed</span><span className="plan">Same-Day Resume Diagnostic</span><h3>$49 <small>one time</small></h3><p>Reserve one of five same-day review slots this week. Get a focused expert review of your resume for the job you want.</p>
               <ul><li>Human review of your current resume</li><li>Review against your target job posting</li><li>Your 5 highest-impact fixes</li><li>Clear positioning recommendations</li><li>Delivered within one business day</li><li>No subscription or recurring charge</li></ul>
-              <button className="button" onClick={checkout} disabled={checkoutLoading}>{checkoutLoading ? "Opening secure checkout…" : "Get my diagnostic"} <span>→</span></button>
+              <button className="button" onClick={checkout} disabled={checkoutLoading}>{checkoutLoading ? "Opening secure checkout…" : "Reserve my review"} <span>→</span></button>
             </article>
           </div>
         </section>
@@ -265,16 +265,16 @@ function App() {
               ["Do you store my resume?", "Threadline does not intentionally persist resume or job-description text. Your input is sent for the analysis request and returned to your browser as a report."],
               ["Is the match score a guarantee?", "No. Hiring is human and contextual. The score is a directional assessment of the evidence and alignment visible in the two documents, not a promise of an interview."],
               ["Does it work for career changers?", "Yes. Threadline looks for supported transferable skills and career patterns while staying honest about missing domain experience."],
-              ["What do I get in the paid report?", "A deeper keyword audit, evidence-backed rewrites, likely objections, interview probability analysis, pivot paths, transferable skills, and a focused 30-minute plan."],
+              ["What do I get in the Same-Day Resume Diagnostic?", "A human review of your current resume against one target job, your five highest-impact fixes, and clear positioning recommendations—delivered within one business day."],
             ].map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}
           </div>
         </section>
 
         <section className="cta">
           <span className="eyebrow">Your application deserves a fair read</span>
-          <h2>Make the signal impossible to miss.</h2>
+          <h2>Make your next application clearer, stronger, and easier to trust.</h2>
           <p>See what’s working, what isn’t, and what to do next.</p>
-          <a href="#analyze" className="button button-light">Check my job fit <span>→</span></a>
+          <a href="#pricing" className="button button-light">Reserve my review <span>→</span></a>
         </section>
       </main>
 
